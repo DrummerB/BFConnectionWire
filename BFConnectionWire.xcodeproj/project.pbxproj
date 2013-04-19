@@ -7,17 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC81DFF115E834DB00F7A06B /* BFConnectionWireView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC81DFF015E834DB00F7A06B /* BFConnectionWireView.m */; };
+		EC2C23E617220C840092087E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECFA339615E81F7000FD5ADB /* Cocoa.framework */; };
+		EC2C23F117220CAA0092087E /* BFConnectionWire-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = EC2C23F017220CAA0092087E /* BFConnectionWire-Prefix.pch */; };
+		EC2C23F317220CC40092087E /* BFConnectionWire.h in Headers */ = {isa = PBXBuildFile; fileRef = ECFA33B915E820B100FD5ADB /* BFConnectionWire.h */; };
+		EC2C23F417220CC40092087E /* BFConnectionWire.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFA33BA15E820B100FD5ADB /* BFConnectionWire.m */; };
+		EC2C23F517220CC40092087E /* BFConnectionWireView.h in Headers */ = {isa = PBXBuildFile; fileRef = EC81DFEF15E834DB00F7A06B /* BFConnectionWireView.h */; };
+		EC2C23F617220CC40092087E /* BFConnectionWireView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC81DFF015E834DB00F7A06B /* BFConnectionWireView.m */; };
+		EC2C23F917220CDE0092087E /* libBFConnectionWire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2C23E517220C840092087E /* libBFConnectionWire.a */; };
 		ECFA339715E81F7000FD5ADB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECFA339615E81F7000FD5ADB /* Cocoa.framework */; };
 		ECFA33A115E81F7000FD5ADB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECFA339F15E81F7000FD5ADB /* InfoPlist.strings */; };
 		ECFA33A315E81F7000FD5ADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFA33A215E81F7000FD5ADB /* main.m */; };
 		ECFA33A715E81F7000FD5ADB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = ECFA33A515E81F7000FD5ADB /* Credits.rtf */; };
 		ECFA33AA15E81F7000FD5ADB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFA33A915E81F7000FD5ADB /* AppDelegate.m */; };
 		ECFA33AD15E81F7000FD5ADB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECFA33AB15E81F7000FD5ADB /* MainMenu.xib */; };
-		ECFA33BB15E820B100FD5ADB /* BFConnectionWire.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFA33BA15E820B100FD5ADB /* BFConnectionWire.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EC2C23F717220CDA0092087E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECFA338915E81F7000FD5ADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC2C23E417220C840092087E;
+			remoteInfo = BFConnectionWire;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		EC2C23E517220C840092087E /* libBFConnectionWire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBFConnectionWire.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2C23F017220CAA0092087E /* BFConnectionWire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BFConnectionWire-Prefix.pch"; sourceTree = "<group>"; };
 		EC81DFEF15E834DB00F7A06B /* BFConnectionWireView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFConnectionWireView.h; sourceTree = "<group>"; };
 		EC81DFF015E834DB00F7A06B /* BFConnectionWireView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFConnectionWireView.m; sourceTree = "<group>"; };
 		ECFA339215E81F7000FD5ADB /* BFConnectionWire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BFConnectionWire.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,10 +55,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EC2C23E217220C840092087E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2C23E617220C840092087E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECFA338F15E81F7000FD5ADB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2C23F917220CDE0092087E /* libBFConnectionWire.a in Frameworks */,
 				ECFA339715E81F7000FD5ADB /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC2C23F217220CAE0092087E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC2C23F017220CAA0092087E /* BFConnectionWire-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		ECFA338715E81F7000FD5ADB = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				ECFA339215E81F7000FD5ADB /* BFConnectionWire.app */,
+				EC2C23E517220C840092087E /* libBFConnectionWire.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,16 +151,47 @@
 				ECFA33BA15E820B100FD5ADB /* BFConnectionWire.m */,
 				EC81DFEF15E834DB00F7A06B /* BFConnectionWireView.h */,
 				EC81DFF015E834DB00F7A06B /* BFConnectionWireView.m */,
+				EC2C23F217220CAE0092087E /* Supporting Files */,
 			);
 			path = BFConnectionWire;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		EC2C23E317220C840092087E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2C23F117220CAA0092087E /* BFConnectionWire-Prefix.pch in Headers */,
+				EC2C23F317220CC40092087E /* BFConnectionWire.h in Headers */,
+				EC2C23F517220CC40092087E /* BFConnectionWireView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		ECFA339115E81F7000FD5ADB /* BFConnectionWire */ = {
+		EC2C23E417220C840092087E /* BFConnectionWire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ECFA33B015E81F7000FD5ADB /* Build configuration list for PBXNativeTarget "BFConnectionWire" */;
+			buildConfigurationList = EC2C23ED17220C840092087E /* Build configuration list for PBXNativeTarget "BFConnectionWire" */;
+			buildPhases = (
+				EC2C23E117220C840092087E /* Sources */,
+				EC2C23E217220C840092087E /* Frameworks */,
+				EC2C23E317220C840092087E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BFConnectionWire;
+			productName = BFConnectionWire;
+			productReference = EC2C23E517220C840092087E /* libBFConnectionWire.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ECFA339115E81F7000FD5ADB /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECFA33B015E81F7000FD5ADB /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
 				ECFA338E15E81F7000FD5ADB /* Sources */,
 				ECFA338F15E81F7000FD5ADB /* Frameworks */,
@@ -135,8 +201,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				EC2C23F817220CDA0092087E /* PBXTargetDependency */,
 			);
-			name = BFConnectionWire;
+			name = Demo;
 			productName = BFConnectionWire;
 			productReference = ECFA339215E81F7000FD5ADB /* BFConnectionWire.app */;
 			productType = "com.apple.product-type.application";
@@ -162,7 +229,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ECFA339115E81F7000FD5ADB /* BFConnectionWire */,
+				ECFA339115E81F7000FD5ADB /* Demo */,
+				EC2C23E417220C840092087E /* BFConnectionWire */,
 			);
 		};
 /* End PBXProject section */
@@ -198,18 +266,33 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EC2C23E117220C840092087E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2C23F417220CC40092087E /* BFConnectionWire.m in Sources */,
+				EC2C23F617220CC40092087E /* BFConnectionWireView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECFA338E15E81F7000FD5ADB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ECFA33A315E81F7000FD5ADB /* main.m in Sources */,
 				ECFA33AA15E81F7000FD5ADB /* AppDelegate.m in Sources */,
-				ECFA33BB15E820B100FD5ADB /* BFConnectionWire.m in Sources */,
-				EC81DFF115E834DB00F7A06B /* BFConnectionWireView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC2C23F817220CDA0092087E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC2C23E417220C840092087E /* BFConnectionWire */;
+			targetProxy = EC2C23F717220CDA0092087E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ECFA339F15E81F7000FD5ADB /* InfoPlist.strings */ = {
@@ -239,6 +322,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EC2C23EE17220C840092087E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BFConnectionWire/BFConnectionWire-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EC2C23EF17220C840092087E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BFConnectionWire/BFConnectionWire-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		ECFA33AE15E81F7000FD5ADB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -317,6 +426,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EC2C23ED17220C840092087E /* Build configuration list for PBXNativeTarget "BFConnectionWire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2C23EE17220C840092087E /* Debug */,
+				EC2C23EF17220C840092087E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		ECFA338C15E81F7000FD5ADB /* Build configuration list for PBXProject "BFConnectionWire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -326,7 +443,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ECFA33B015E81F7000FD5ADB /* Build configuration list for PBXNativeTarget "BFConnectionWire" */ = {
+		ECFA33B015E81F7000FD5ADB /* Build configuration list for PBXNativeTarget "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECFA33B115E81F7000FD5ADB /* Debug */,

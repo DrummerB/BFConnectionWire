@@ -49,16 +49,16 @@ static NSMutableArray *wires;
 		_wireWidth = 2.0f;
 		_coatWidth = 2.0f;
 		_pinRadius = 2.0f;
-		_shadowBlurRadius = 2.0f;
-		_shadowOffset = CGSizeMake(0.0f, -1.0f);
+		_shadowBlurRadius = 3.0f;
+		_shadowOffset = CGSizeMake(0.0f, -2.0f);
 		_startPoint = startPoint;
 		_endPoint = endPoint;
 		_shown = NO;
 		
 		_wireColor = [NSColor colorWithCalibratedRed: 0.17 green: 0.64 blue: 1 alpha: 1];
 		_wireColor = [_wireColor colorWithAlphaComponent: 0.7];
-		_coatColor = [NSColor colorWithCalibratedRed: 0.8 green: 0.8 blue: 0.8 alpha: 0.99];
-		_shadowColor = [NSColor colorWithCalibratedRed:0.5 green:0.5 blue:0.5 alpha:0.8];
+		_coatColor = [NSColor whiteColor];
+		_shadowColor = [NSColor colorWithCalibratedRed:0.5 green:0.5 blue:0.5 alpha:0.6];
 		
 		_wireView = [[BFConnectionWireView alloc] initWithFrame:rect];
 		_wireView.wire = self;
