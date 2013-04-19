@@ -29,7 +29,7 @@
 	_shadowColorWell.color = _wire.shadowColor;
 }
 
-- (void)mouseDown:(NSEvent *)theEvent {
+- (void)startConnectionWire {
 	BFConnectionWire *wire = [[BFConnectionWire alloc] initAtMouseLocation];
 	wire.followMouse = YES;
 	wire.wireWidth = [_wireWidthTextField floatValue];
@@ -42,7 +42,16 @@
 	wire.shadowOffset = CGSizeMake([_shadowOffsetXTextField floatValue], [_shadowOffsetYTextField floatValue]);
 	wire.delegate = self;
 	[wire show];
-	NSLog(@"Mouse down. Created wire at %@", NSStringFromPoint(wire.startPoint));
+}
+
+- (void)mouseDown:(NSEvent *)theEvent {
+	[self startConnectionWire];
+	NSLog(@"Left mouse down. Created wire.");
+}
+
+- (void)rightMouseDown:(NSEvent *)theEvent {
+	[self startConnectionWire];
+	NSLog(@"Right mouse down. Created wire.");
 }
 
 - (void)connectionWireMoved:(BFConnectionWire *)wire {

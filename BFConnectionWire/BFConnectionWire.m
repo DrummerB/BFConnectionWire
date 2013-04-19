@@ -181,7 +181,10 @@ static NSMutableArray *wires;
 	_followMouse = followMouse;
 	if (_followMouse) {
 		if (!_eventTap) {
-			CGEventMask eventMask = CGEventMaskBit(kCGEventLeftMouseDragged) | CGEventMaskBit(kCGEventLeftMouseUp);
+			CGEventMask eventMask = CGEventMaskBit(kCGEventLeftMouseDragged) |
+									CGEventMaskBit(kCGEventRightMouseDragged) |
+									CGEventMaskBit(kCGEventLeftMouseUp) |
+									CGEventMaskBit(kCGEventRightMouseUp);
 			_eventTap = CGEventTapCreate(kCGSessionEventTap, kCGHeadInsertEventTap, 1, eventMask, mouseEventCallback, (__bridge void *)(self));
 			_runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, _eventTap, 0);
 			CFRunLoopAddSource(CFRunLoopGetCurrent(), _runLoopSource, kCFRunLoopCommonModes);
@@ -213,11 +216,13 @@ static NSMutableArray *wires;
 
 CGEventRef mouseEventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon) {
 	BFConnectionWire *wire = (__bridge BFConnectionWire *)refcon;
-	if (CGEventMaskBit(type) & CGEventMaskBit(kCGEventLeftMouseUp)) {
+	if (CGEventMaskBit(type) & CGEventMaskBit(kCGEventLeftMouseUp) ||
+		CGEventMaskBit(type) & CGEventMaskBit(kCGEventRightMouseUp)) {
 		CGEventTapEnable(wire.eventTap, false);
 		[wire mouseUpObserved];
 	}
-	if (CGEventMaskBit(type) & CGEventMaskBit(kCGEventLeftMouseDragged)) {
+	if (CGEventMaskBit(type) & CGEventMaskBit(kCGEventLeftMouseDragged) ||
+		CGEventMaskBit(type) & CGEventMaskBit(kCGEventRightMouseDragged)) {
 		[wire mouseDragObserved];
 	}
     return event;
