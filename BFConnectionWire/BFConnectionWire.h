@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@protocol BFConnectionWire;
+@protocol BFConnectionWireDelegate;
 
 
 @interface BFConnectionWire : NSObject
@@ -32,7 +32,7 @@
 @property (nonatomic) CGFloat shadowBlurRadius;
 @property (nonatomic) CGSize shadowOffset;
 
-@property (nonatomic) NSObject<BFConnectionWire> *delegate;
+@property (nonatomic) NSObject<BFConnectionWireDelegate> *delegate;
 
 - (id)initWithStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint;
 - (id)initAtMouseLocation;
@@ -42,7 +42,7 @@
 @end
 
 
-@protocol BFConnectionWire <NSObject>
+@protocol BFConnectionWireDelegate <NSObject>
 
 - (void)connectionWireMoved:(BFConnectionWire *)wire;
 - (void)connectionWireFinished:(BFConnectionWire *)wire;

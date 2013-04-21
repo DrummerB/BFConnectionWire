@@ -101,7 +101,9 @@ static NSMutableArray *wires;
 
 - (void)close {
 	if (_shown) {
-		[_window close];
+		if ([_window isVisible]) {
+			[_window close];
+		}
 		[wires removeObject:self];
 		// the wire will be release after this
 	}
@@ -208,6 +210,7 @@ static NSMutableArray *wires;
 }
 
 - (void)mouseUpObserved {
+	[_window close];
 	if ([_delegate respondsToSelector:@selector(connectionWireFinished:)]) {
 		[_delegate connectionWireFinished:self];
 	}
