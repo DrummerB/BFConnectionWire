@@ -48,7 +48,7 @@ static NSMutableArray *wires;
 		
 		_wireWidth = 2.0f;
 		_coatWidth = 2.0f;
-		_pinRadius = 2.0f;
+		_pinRadius = 3.0f;
 		_shadowBlurRadius = 3.0f;
 		_shadowOffset = CGSizeMake(0.0f, -2.0f);
 		_startPoint = startPoint;
