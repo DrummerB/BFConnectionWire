@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BFConnectionWire.h"
 
-@interface AppDelegate : NSResponder <NSApplicationDelegate, BFConnectionWire>
+@interface AppDelegate : NSResponder <NSApplicationDelegate, BFConnectionWireDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (nonatomic) BFConnectionWire *wire;
